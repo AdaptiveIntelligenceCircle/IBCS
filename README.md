@@ -1,4 +1,4 @@
-# Introspective Behavioral Compiler System (IBCS)
+# Instrospective Behavioral Compiler System (IBCS)
 
 > “We don't just compile instructions. We compile *intentions*.”
 
