@@ -1,4 +1,5 @@
-Manifesto cho IBCS (Introspective Behavioral Compiler System)
+# Manifesto cho IBCS (Introspective Behavioral Compiler System)
+-- 
 1. Tinh thần cốt lõi
 
 IBCS không chỉ là một compiler hay runtime. Nó là hệ thống biên dịch hành vi nội quan – nơi ngôn ngữ, tư duy và hành động được mô phỏng, phân tích và biến đổi.
