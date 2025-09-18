@@ -80,21 +80,21 @@ Tài liệu này mô tả kiến trúc của **IBCS (Introspective Behavioral Co
 ---
 
 ## 5. Cấu trúc thư mục
-- `language/` — grammar, parser.
-- `compiler/` — frontend & passes.
-- `runtime/` — VM, sandbox, executor.
-- `introspection/` — trace, analyzer, replay.
-- `plugins/` — plugin manager & API.
-- `security/` — policy engine, attestation.
-- `tools/` — CLI (`ibcs-compile`, `ibcs-deploy`, `ibcs-replay`).
+- `core/` 
+- `language/`
+- `script/` 
+- `runtime/` 
+- `simulation/`
+- `plugins/` 
+- `config/` 
+- `data/` 
 
 ---
 
 ## 6. APIs & Interfaces
-- Compiler CLI: `ibcs-compile src.ibcsl -o behavior.bir`
 - Runtime API: deploy, start, snapshot, trace, rollback.
 - Plugin ABI: `init(HostApi*)`, `shutdown()`, `hook_pass()`.
-- Introspection SDK: client libs (C++, Rust, Lua).
+- Introspection SDK: client libs (C++, Python,shell, bat,...).
 
 ---
 
