@@ -2,8 +2,7 @@
 
 > “We don't just compile instructions. We compile *intentions*.”
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/350a0231-12e1-43db-b201-b537c44e2bf4" />
-
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/3a3f86d9-6134-434e-9bf0-26d1ca83ff99" />
 
 
 ## 🔬 Overview
