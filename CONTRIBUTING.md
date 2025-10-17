@@ -14,6 +14,19 @@ We welcome pull requests, feature suggestions, and bug reports.
   - Classes: `PascalCase`
   - Functions: `camelCase`
   - Variables: `snake_case`
+```
+### Commit your changes
+```bash
+git commit -m "Add: new module for context reasoning"
+```
+### Testing 
+```bash
+make test
+```
+
+### Communication
+If your change involves architecture or philosophy, please open an Issue for discussion before coding.
+
 
 ---
 
