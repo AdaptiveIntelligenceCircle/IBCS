@@ -1,0 +1,23 @@
+# Build files
+/build/
+/bin/
+/obj/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+*.user
+*.log
+*.swp
+
+# Temporary or generated
+*.tmp
+*.bak
+*.cache
+
+# Compiled objects
+*.o
+*.a
+*.so
+*.dll
+*.exe
