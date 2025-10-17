@@ -1,4 +1,4 @@
-### 🌿 3. `CODE_OF_CONDUCT.md`
+### 🌿`CODE_OF_CONDUCT.md`
 ```markdown
 # Code of Conduct
 
