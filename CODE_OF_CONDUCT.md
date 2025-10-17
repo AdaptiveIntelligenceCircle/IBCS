@@ -10,3 +10,7 @@ As contributors and maintainers of **IBCS**, we pledge to make participation in 
 - Report any unacceptable behavior via GitHub Issues.
 
 Violations may result in temporary or permanent bans from the community.
+```
+
+### License 
+https://www.apache.org/licenses/LICENSE-2.0.txt
