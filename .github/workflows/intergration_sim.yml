@@ -1,0 +1,25 @@
+name: Integration Simulation (IBCS Runtime)
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Runtime
+        run: |
+          mkdir -p build && cd build
+          cmake .. -DCMAKE_BUILD_TYPE=Debug
+          cmake --build . -- -j$(nproc)
+      - name: Run Simulation
+        run: |
+          ./build/runtime/ibcs_runtime --simulate --episodes=10
+      - name: Check outputs
+        run: |
+          if grep -q "ERROR" logs/runtime.log; then
+            echo "Simulation failed"; exit 1;
+          fi
+          echo "Integration simulation successful ✅"
