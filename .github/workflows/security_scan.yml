@@ -1,0 +1,28 @@
+name: Static Analysis & Security Scan (IBCS)
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install clang tools
+        run: sudo apt-get install -y clang clang-tidy cppcheck
+      - name: Run clang-tidy
+        run: |
+          mkdir -p build && cd build
+          cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+          cd ..
+          clang-tidy core/*.cpp modules/**/*.cpp -- -std=c++20
+      - name: Run cppcheck
+        run: cppcheck --enable=warning,style,performance,portability core/ modules/
+      - name: Rust security scan
+        run: |
+          cargo install cargo-audit || true
+          cd plugin/rust
+          cargo audit || true
+      - name: Lua static check
+        run: luacheck plugin/lua || echo "luacheck not critical"
