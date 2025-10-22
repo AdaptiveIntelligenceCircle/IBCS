@@ -1,0 +1,42 @@
+name: Build & Unit Tests (IBCS)
+
+on:
+  push:
+    branches: [ "main", "develop", "feature/**" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lang: [cpp, rust, lua]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup C++ build
+        if: matrix.lang == 'cpp'
+        run: |
+          sudo apt-get update && sudo apt-get install -y cmake build-essential
+          mkdir -p build && cd build
+          cmake .. -DCMAKE_BUILD_TYPE=Release
+          cmake --build . -- -j$(nproc)
+          ctest --output-on-failure
+
+      - name: Setup Rust build
+        if: matrix.lang == 'rust'
+        run: |
+          rustup update
+          cd plugin/rust
+          cargo test --verbose
+
+      - name: Lua Syntax Check
+        if: matrix.lang == 'lua'
+        run: |
+          sudo apt-get install -y lua5.4
+          find plugin/lua -name "*.lua" -print0 | xargs -0 -n1 lua -p
