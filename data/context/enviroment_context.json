@@ -1,0 +1,29 @@
+{
+  "environment_id": "local_dev",
+  "timestamp": "2025-08-29T14:05:00Z",
+  "system": 
+  {
+    "os": "Windows 11",
+    "cpu": "Intel core i7",
+    "memory_gb": 32,
+    "network": "offline"
+  },
+  "signals": [
+    {
+      "source": "user_input",
+      "type": "command",
+      "content": "compile idea seed_001",
+      "confidence": 0.95
+    },
+    {
+      "source": "sensor_mock",
+      "type": "anomaly",
+      "content": "low disk space warning",
+      "confidence": 0.65
+    }
+  ],
+  "constraints": {
+    "timeout_sec": 10,
+    "max_memory_mb": 2048
+  }
+}
