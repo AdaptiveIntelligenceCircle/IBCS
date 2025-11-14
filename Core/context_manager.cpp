@@ -78,6 +78,7 @@ namespace ibcs
             cerr <<"Error : Cannot open file for loading" << filepath << endl;
             return ;  
         }
+        
         json j ; 
         in >> j ; 
 

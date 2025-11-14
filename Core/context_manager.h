@@ -2,7 +2,7 @@
 #include <iostream>
 #include <unordered_map> 
 #include <string>
-
+#include <vector> 
 using namespace std; 
 
 namespace ibcs
@@ -19,7 +19,8 @@ namespace ibcs
         void rollback(); 
         void logChanges(); 
         void localFromJson(const string &filepath); 
-        void saveToJson(const string &filepath); 
+        void saveToJson(const string &filepath);
+       
 
         private: 
         unordered_map<string, string> context;
