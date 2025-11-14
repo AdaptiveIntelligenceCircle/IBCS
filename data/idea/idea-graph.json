@@ -1,0 +1,30 @@
+{
+  "graph_id": "idea_space_01",
+  "nodes": [
+    {
+      "id": "idea_seed_001",
+      "label": "Reflective Compilation",
+      "type": "core",
+      "attributes": {
+        "complexity": "medium",
+        "domain": "compiler"
+      }
+    },
+    {
+      "id": "idea_seed_002",
+      "label": "Rollback Safety",
+      "type": "safety",
+      "attributes": {
+        "complexity": "low",
+        "domain": "protection"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "idea_seed_001",
+      "target": "idea_seed_002",
+      "relation": "requires"
+    }
+  ]
+}
