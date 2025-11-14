@@ -19,7 +19,8 @@ PhysicsEnv env;
 
 int main ()
 {
-    for (int i=0; i<10; i++) {
+    for (int i=0; i<10; i++) 
+    {
     auto obs = bridge.sense_from_world();
     auto act = cog.decide(obs);
     bridge.send_action_to_world(act);
