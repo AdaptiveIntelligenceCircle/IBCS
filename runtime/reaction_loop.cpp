@@ -1,51 +1,53 @@
 #include "reaction_loop.h"
 using namespace std; 
 
-#include "executor.h"
-#include "memory.h"
+#include <string>
+#include <algorithm>  
 
-#include "behavior_sandbox.h"
-
-#include <iostream>
 #include <chrono>
-#include <thread>
+using namespace ibcs :: runtime; 
 
-using namespace ibcs ::runtime; 
+ReactionLoop :: ReactionLoop(shared_ptr<BehaviorSandBox> sb, 
+    shared_ptr<Executor> ex , shared_ptr<Memory> mem, int interval
+) : sandbox(sb), executor(ex), memory(mem), running(false), interval_ms(interval)
+{}
 
-namespace runtime
+ReactionLoop :: ~ReactionLoop()
 {
-    void ReactionLoop :: start()
-    {
-        running = true; 
-        cout <<"Reaction Loop - Starting main reaction loop...\n" << endl; 
-
-        while(running)
-        {
-            auto inputContext = memory -> fetchLastestInput();
-            if (inputContext)
-            {
-                auto reactionPlan = sandbox -> analyze(inputContext.value()); 
-                if (reactionPlan.isValid())
-                {
-                    executor -> execute(reactionPlan); 
-                }
-                else 
-                {
-                    cout <<"Reaction - No loop reaction plan generated" << endl; 
-                }
-            }
-            else{
-                cout <<"Reaction Loop - No new input context Available" << endl; 
-            }
-            // this_thread :: sleep_for(chrono::milliseconds(loopThread)); 
-        }
-        cout <<"Reaction Loop - stopped " << endl; 
-    }
-    void ReactionLoop :: stop()
-    {
-        running = false; 
-    }
-
-    
+    stop();
 }
 
+void ReactionLoop :: start()
+{
+    if (running.load())
+    {
+        cerr <<"[ReactionLoop] - Already running" << endl; 
+        return;
+    }
+    running.store(true);
+    loop_thread = thread(&ReactionLoop :: loop, this); 
+}
+
+void ReactionLoop :: stop()
+{
+    if (!running.load()) return;
+    running.store(false); 
+    if (loop_thread.joinable())
+    {
+        loop_thread.join(); 
+    }
+}
+
+void ReactionLoop :: loop()
+{
+    cout <<"[ReactionLoop] - Started loop with interval" << interval_ms << "ms\n";
+
+    while (running.load())
+    {
+        // todo : tich hop event queue, trigger tu sandbox hoac executor ....//
+        cout <<"[ReactionLoop] Tick\n"; 
+        this_thread :: sleep_for(chrono ::milliseconds(interval_ms)); 
+    }
+
+    cout <<"[Reaction LOOP] loop stopped" << endl; 
+}
