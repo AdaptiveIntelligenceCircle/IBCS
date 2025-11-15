@@ -1,0 +1,8 @@
+{
+  "types": {
+    "int":   { "size": 8 },
+    "float": { "size": 8 },
+    "bool":  { "size": 1 },
+    "string":{ "size": "dynamic" }
+  }
+}

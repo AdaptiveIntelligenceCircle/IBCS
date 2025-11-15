@@ -1,0 +1,6 @@
+{
+    "ping" : "lua : adapter.handle_ping",
+    "introspect_state": "lua : adapter.introspect_state", 
+    "dump_ast": "cpp:dump_ast_handler", 
+    "get_opcode_table": "cpp:get_opcode_export"
+}

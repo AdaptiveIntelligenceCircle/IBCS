@@ -1,0 +1,8 @@
+{
+    "version" : "1.0.0",
+    "rules": [
+    { "node": "Assignment", "allowed_children": ["Identifier", "Expression"] },
+    { "node": "IfStatement", "allowed_children": ["Condition", "Block"] },
+    { "node": "FunctionCall", "max_args": 5 }
+    ]
+}

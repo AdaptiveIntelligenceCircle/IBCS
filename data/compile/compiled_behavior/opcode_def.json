@@ -1,0 +1,11 @@
+{
+    "version" : "1.0.0", 
+    "opcodes":
+    {
+        "LOAD_CONST":   { "id": 1, "args": 1 },
+        "LOAD_VAR":     { "id": 2, "args": 1 },
+        "STORE_VAR":    { "id": 3, "args": 1 },
+        "CALL_FUNC":    { "id": 10, "args": 2 },
+        "RETURN":       { "id": 99, "args": 0 }
+    }
+}
