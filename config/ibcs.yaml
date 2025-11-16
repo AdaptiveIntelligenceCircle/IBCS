@@ -1,0 +1,15 @@
+runtime:
+  log_level: "info"
+  max_threads: 4
+  hot_reload: true
+
+security:
+  allow_remote_introspection: false
+  trusted_nodes:
+    - "local"
+  max_request_size: 2048
+
+introspection:
+  enable: true
+  expose_opcode_table: true
+  max_depth: 12

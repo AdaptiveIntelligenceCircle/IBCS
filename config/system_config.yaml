@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "fields": {
+    "runtime": {
+      "log_level": "info | debug | warn | error",
+      "max_threads": "int",
+      "hot_reload": "bool"
+    },
+    "security": {
+      "allow_remote_introspection": "bool",
+      "trusted_nodes": "array<string>",
+      "max_request_size": "int"
+    },
+    "introspection": {
+      "enable": "bool",
+      "expose_opcode_table": "bool",
+      "max_depth": "int"
+    }
+  }
+}
