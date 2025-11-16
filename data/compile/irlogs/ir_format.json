@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "description": "Format file IRLogs cho IBCS compiler",
+  "fields": {
+    "timestamp": "uint64, epoch",
+    "stage": "parse | transform | optimize | codegen",
+    "input": "string, raw code hoặc snippet",
+    "output": "string, AST hoặc bytecode dump",
+    "meta": {
+      "node_count": "int",
+      "opcode_count": "int",
+      "rules_applied": "array of string"
+    }
+  }
+}

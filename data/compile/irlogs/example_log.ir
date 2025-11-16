@@ -1,0 +1,11 @@
+{
+  "timestamp": 1731582400,
+  "stage": "transform",
+  "input": "a = b + 1",
+  "output": "(Assign (Var a) (Add (Var b) (Const 1)))",
+  "meta": {
+    "node_count": 4,
+    "opcode_count": 0,
+    "rules_applied": ["SimplifyAdd", "CheckAssignment"]
+  }
+}
