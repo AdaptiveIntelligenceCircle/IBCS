@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "description": "Specification for IBCS compiler trace events",
+  "fields": {
+    "timestamp": "uint64",
+    "category": "parse | transform | optimize | codegen | error | introspection",
+    "message": "string",
+    "meta": {
+      "node": "string (optional)",
+      "rule": "string (optional)",
+      "extra": "object"
+    }
+  }
+}

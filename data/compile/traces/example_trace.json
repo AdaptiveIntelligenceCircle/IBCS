@@ -1,0 +1,21 @@
+[
+  {
+    "timestamp": 1731582400,
+    "category": "transform",
+    "message": "Applied rule SimplifyAdd",
+    "meta": {
+      "node": "AddExpr",
+      "rule": "SimplifyAdd",
+      "extra": {}
+    }
+  },
+  {
+    "timestamp": 1731582401,
+    "category": "codegen",
+    "message": "Emitted opcode LOAD_CONST",
+    "meta": {
+      "node": "Const",
+      "extra": { "value": 1 }
+    }
+  }
+]
