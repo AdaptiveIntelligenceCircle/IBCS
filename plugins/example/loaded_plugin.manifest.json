@@ -1,0 +1,8 @@
+{
+  "name": "builtins.logger",
+  "version": "1.0.0",
+  "entry": "examples/logger_plugin.lua",
+  "type": "lua",
+  "permissions": ["read_state","introspection"],
+  "capabilities": ["log","trace_emit"]
+}
