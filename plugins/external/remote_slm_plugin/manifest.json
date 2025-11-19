@@ -1,0 +1,8 @@
+{
+  "name": "external.remote_slm",
+  "version": "1.0.0",
+  "entry": "plugins/external/remote_slm_plugin/remote_slm_plugin.so",
+  "type": "native",
+  "permissions": ["external_call"],
+  "capabilities": ["external.infer_text", "external.health_check"]
+}
