@@ -1,0 +1,8 @@
+{
+  "name": "external.perception",
+  "version": "1.0.0",
+  "entry": "plugins/external/perception/perception_plugin.so",
+  "type": "native",
+  "permissions": ["sensor.decode"],
+  "capabilities": ["perception.run", "perception.load_model", "perception.unload_model"]
+}
