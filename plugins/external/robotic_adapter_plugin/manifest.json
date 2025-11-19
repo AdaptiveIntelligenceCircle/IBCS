@@ -1,0 +1,8 @@
+{
+    "name": "external.robotic_adapter",
+    "version": "1.0.0",
+    "entry": "plugins/external/robotic_adapter_plugin/robotic_adapter_plugin.so",
+    "type": "native",
+    "permissions": ["robot.send", "robot.read"],
+    "capabilities": ["robot.send", "robot.read", "robot.motion_adapt", "safety.guard"]
+}
