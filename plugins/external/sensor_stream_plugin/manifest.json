@@ -1,0 +1,8 @@
+{
+  "name": "external.sensor_stream",
+  "version": "1.0.0",
+  "entry": "plugins/external/sensor_stream_plugin/sensor_stream_plugin.so",
+  "type": "native",
+  "permissions": ["sensor.read"],
+  "capabilities": ["sensor.stream", "sensor.decode", "sensor.subscribe"]
+}

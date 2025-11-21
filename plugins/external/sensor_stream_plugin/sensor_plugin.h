@@ -23,6 +23,8 @@ using namespace std;
 #include <cstdint>
 #include <queue>
 
+#include "base/plugin_interface.h"
+
 namespace ibcs :: plugin :: external :: sensor 
 {
     // Raw packet from stream (transport specific)
@@ -61,6 +63,7 @@ namespace ibcs :: plugin :: external :: sensor
         int max_queue = 0;
         bool auto_decode = true; 
         map<string, string> extras; 
+        string mime_; 
     }; 
 
     class StreamDecoder;
@@ -70,9 +73,10 @@ namespace ibcs :: plugin :: external :: sensor
         public: 
         SensorStreamPlugin(); 
         ~SensorStreamPlugin();  
+        string mime_ ; 
 
         // IPlugin ;
-        //ibcs :: plugin :: PluginInfo info() const override;
+        ibcs :: plugin :: PluginInfo info() const;
         bool on_load() ; 
         bool on_unload();  
 
