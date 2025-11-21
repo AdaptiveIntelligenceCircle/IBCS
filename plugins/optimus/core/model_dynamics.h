@@ -13,8 +13,8 @@ namespace optimus :: core
     class ModelDynamics
     {
         public: 
-        ModelDynamics(); 
-        ~ModelDynamics(); 
+        ModelDynamics() {};  
+        ~ModelDynamics(){}; 
 
         bool init(); 
         vector<double> compute_torques(const StateManager &state, const WalkGait &gait); 
