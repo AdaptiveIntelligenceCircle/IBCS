@@ -1,0 +1,8 @@
+{
+  "name": "optimus.hardware",
+  "version": "1.0.0",
+  "entry": "optimus/hardware/",
+  "type": "internal",
+  "permissions": ["hardware.read", "hardware.write"],
+  "description": "Hardware abstraction layer (motor, imu, torque, power) for Optimus. Stubs provided for simulation."
+}
