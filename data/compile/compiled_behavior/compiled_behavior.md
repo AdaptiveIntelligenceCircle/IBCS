@@ -38,7 +38,7 @@ compiled_behavior/
    └── metadata.json
 ```
 
-Tùy dự án của bạn, có thể có thêm file `.bin` hoặc `.msgpack`.
+Có thể có thêm file `.bin`, `cpp` hoặc `.msgpack`.
 
 ---
 
