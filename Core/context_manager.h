@@ -20,7 +20,9 @@ namespace ibcs
         void logChanges(); 
         void localFromJson(const string &filepath); 
         void saveToJson(const string &filepath);
-       
+        unordered_map<string, string> getFullContext() const;
+        vector<pair<string, double>> getConceptHistory(const string &Concept) const; 
+        vector<string> getRelatedConcepts(const string &Concept) const;
 
         private: 
         unordered_map<string, string> context;

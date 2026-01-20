@@ -1,5 +1,6 @@
 #include "meta_reasoner.h"
 #include <sstream>
+#include "context_manager.h"
 
 namespace ibcs {
 
