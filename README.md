@@ -4,6 +4,9 @@
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/3a3f86d9-6134-434e-9bf0-26d1ca83ff99" />
 
+> AIC/HMN is licensed under GPL-3.0. Any fork or derivative work must keep the same license and respect the core principles: zero-donation, third path independence, and ethical-from-kernel. The project is currently maintained by the founder. During the founder’s mandatory military service (expected 2027–2029), the project will enter maintenance mode. All code remains public and transparent.”
+
+---
 
 ## 🔬 Overview
 
